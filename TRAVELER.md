@@ -7,19 +7,20 @@ Two Traveler setups are provided:
 
 ## Native PLUGIN mapping
 
-The native file contains 52 unique encoder mappings and 10 useful button mappings across seven pages. Roto-Control can recognize Traveler by plugin hash `081a7b2c68303a52`, bind the exported host parameters directly, display their values, and use host feedback for motor recall.
+The native file contains 63 unique encoder mappings and 25 useful button mappings across eight pages. Roto-Control can recognize Traveler by plugin hash `081a7b2c68303a52`, bind the exported host parameters directly, display their values, and use host feedback for motor recall.
 
 | Page | Encoders (left to right) | Buttons |
 | --- | --- | --- |
-| 1 — Performance/Filter | Filter Cutoff, Resonance, Env Amount, HP Cutoff, Filter Spacing, Stereo Spread, Vintage, Master Volume | Filter Type under Filter Cutoff |
+| 1 — Performance/Filter | Filter Cutoff, Resonance, Env Amount, HP Cutoff, Filter Spacing, Stereo Spread, Vintage, Master Volume | Filter Type, Filter Link, Bass Compensation |
 | 2 — Oscillators 1/2 | Osc 1 Wave, Osc 1 Tune, Osc 2 Tune, Osc 2 Voices, Osc 2 Detune, Osc 2 Spread, FM Depth, Osc 3 Wave | Osc 1 Wave/Octave, Osc 2 Wave/Octave, and Osc 3 Wave |
 | 3 — Oscillator 3/Voice | Osc 3 Tune, Osc 3 Detune, Osc 3 Spread, global Detune, Glide, Bend Down, Bend Up, LF Width | Osc 3 Octave under Osc 3 Tune |
 | 4 — Envelopes | Filter Attack, Decay, Sustain, Release; Amp Attack, Decay, Sustain, Release | — |
 | 5 — Modulation/Motion | Mod Env Attack, Decay, Sustain, Release; Velocity to Filter, Velocity to Amp, LFO 3 Rate, Stereo Panner | LFO 3 Waveform under LFO 3 Rate |
 | 6 — LFO 1/2 | LFO 1 Rate, Fade, Pitch, Filter; LFO 2 Rate, Fade, Pitch, Filter | LFO 1 and LFO 2 Waveform under their Rate controls |
-| 7 — Utility/Output | Filter Key Track, HP Env Amount, Master Trim, Master Pan | — |
+| 7 — Oscillator Mixer | Osc 1 Level/Pan, Osc 2 Level/Pan, Osc 3 Level/Pan, Noise Level, Feedback | Osc 1/2/3 Enable, Noise Enable, Noise Type |
+| 8 — Output/Arp | Filter Drive, Filter Key Track, HP Env Amount, Master Trim, Master Pan, Arp Gate, Arp Swing | Limiter, Pan Random, Arp Enable/Latch/Mode/Octave/Rate/Destination |
 
-Pages 1–3 prioritize controls useful while playing; pages 4–6 group sound design by function. Page 7 deliberately contains only four controls rather than mixing unrelated parameters into the group. Knob and button arrays are independent: button slots are left empty when the export did not provide a musically appropriate button for that page.
+Pages 1–3 prioritize controls useful while playing; pages 4–6 group sound design by function. Page 7 provides a complete oscillator mixer, while Page 8 combines the remaining output controls with the performance-oriented arpeggiator. Its seventh encoder slot is deliberately left empty rather than adding an unrelated or duplicate parameter. Knob and button arrays are independent: button slots are left empty when the export did not provide a musically appropriate button for that page.
 
 Two duplicate knob mappings and an accidental duplicate Amp Decay button from the capture were removed. Amp Release and Mod Envelope Attack were normalized to smooth continuous haptics to match the other envelope stages. Some exported step names remain blank because the host supplied a step count without readable state labels; these were not guessed.
 
@@ -35,19 +36,9 @@ Native parameter mappings can be version-sensitive. If a future Traveler release
 
 ## Missing or ambiguous captures
 
-The current export is usable, but another capture would improve it. The most useful missing native identities are:
+The expanded export resolves the mixer, drive/feedback, filter-link, bass-compensation, limiter, random-pan, oscillator-enable, and arpeggiator identities. It omits the previously captured Filter Cutoff identity, likely because the export reached its 64-encoder capacity; this essential control is retained from the prior export. LFO 3 Fade, Pitch, and Filter depth remain absent; they may not be host-exposed.
 
-- Osc 1, Osc 2, and Osc 3 mixer levels and pan controls
-- Noise level and noise type
-- Drive and Feedback
-- Filter Spread and Bass Compensation
-- HP Link, Random Pan, Limiter, and oscillator mute buttons
-- LFO 3 Fade, Pitch, and Filter depth, if those are host-exposed
-- Arpeggiator On and Latch, if performance control is desired
-
-These can be learned into any temporary Roto positions—the control indices do not matter because this template will regroup them.
-
-The selector metadata also needs clarification. The export reports eight unnamed steps for each oscillator waveform even though the guide describes a continuous four-landmark morph; zero steps for the six-value octave and Filter Type selectors; and 12 raw numeric states for LFO 3 while the guide lists 21 waveforms. A fresh export after explicitly configuring those haptics in Roto-Setup, or screenshots of their host parameter values at each state, would establish the correct step counts and labels.
+Some selector metadata still needs clarification. The export reports eight unnamed steps for each oscillator waveform even though the guide describes a continuous four-landmark morph; zero steps for the six-value octave and Filter Type selectors; 12 raw numeric states for LFO 3 while the guide lists 21 waveforms; and no state names or counts for Arp Mode, Octave, Rate, or Destination. Noise Type is a two-state parameter, but its exported values (`1`, `0`) do not establish which is White and which is Pink, so the mapping preserves those values instead of guessing the labels. A fresh export after explicitly configuring those haptics in Roto-Setup, or screenshots of the host parameter value at each state, would establish the correct step counts and labels.
 
 ## MIDI fallback
 
@@ -56,7 +47,7 @@ Import `Traveler-Roto-Control-MIDI.json` into a MIDI setup slot if the host cann
 ## Sources and assumptions
 
 - [Traveler User's Guide](https://www.keysolutionssounds.com/wp-content/uploads/Traveler_Users_Guide.pdf) — parameter names, ranges, enumerated states, MIDI Learn, Global MIDI CC, and MIDI-channel setup.
-- User-supplied `Traveler.json` and expanded `Traveler-moreoptions.json` exports — source of the exact plugin hash, host parameter indices, parameter hashes, ranges, and haptic settings; the controls were then regrouped into performance pages here.
+- User-supplied `Traveler.json`, `Traveler-moreoptions.json`, and `Traveler-moreoptions2.json` exports — source of the exact plugin hash, host parameter indices, parameter hashes, ranges, and haptic settings; the controls were then regrouped into performance pages here.
 - [Melbourne Instruments MIDI helper](https://www.melbourneinstruments.com/s/MIDI-HELPER.json) and Roto-Control manual — MIDI JSON structure and control constraints.
 - [Community Roto templates](https://github.com/seee-m/Roto-Control-Templates), [rotocontrol-nickel](https://github.com/wyager/rotocontrol-nickel), and [TheGreatElemonade mappings](https://github.com/MrMatch246/RotoControlMappings/tree/main/TheGreatElemonade) — cross-checked haptic modes, step labels, ranges, and hardware label length.
 
