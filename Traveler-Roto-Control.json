@@ -11,7 +11,7 @@
             "macroParam": false,
             "minValue": 0,
             "maxValue": 16383,
-            "controlName": "Filter Cutof",
+            "controlName": "FILTER CUT",
             "colorScheme": 64,
             "hapticMode": 0,
             "hapticIndent1": 255,
@@ -37,7 +37,7 @@
             ]
         },
         {
-            "controlIndex": 1,
+            "controlIndex": 9,
             "mappedParam": 2,
             "paramHash": "087e25365908",
             "macroParam": false,
@@ -69,7 +69,7 @@
             ]
         },
         {
-            "controlIndex": 2,
+            "controlIndex": 10,
             "mappedParam": 5,
             "paramHash": "372b3c2c3047",
             "macroParam": false,
@@ -101,7 +101,7 @@
             ]
         },
         {
-            "controlIndex": 3,
+            "controlIndex": 16,
             "mappedParam": 8,
             "paramHash": "104e34191b0e",
             "macroParam": false,
@@ -133,7 +133,7 @@
             ]
         },
         {
-            "controlIndex": 4,
+            "controlIndex": 40,
             "mappedParam": 83,
             "paramHash": "00220e542e01",
             "macroParam": false,
@@ -165,7 +165,7 @@
             ]
         },
         {
-            "controlIndex": 5,
+            "controlIndex": 41,
             "mappedParam": 90,
             "paramHash": "655106245a53",
             "macroParam": false,
@@ -197,7 +197,7 @@
             ]
         },
         {
-            "controlIndex": 6,
+            "controlIndex": 42,
             "mappedParam": 85,
             "paramHash": "343343103e2b",
             "macroParam": false,
@@ -229,7 +229,7 @@
             ]
         },
         {
-            "controlIndex": 7,
+            "controlIndex": 43,
             "mappedParam": 86,
             "paramHash": "786d4509714a",
             "macroParam": false,
@@ -261,7 +261,7 @@
             ]
         },
         {
-            "controlIndex": 8,
+            "controlIndex": 44,
             "mappedParam": 92,
             "paramHash": "404c4c7a261a",
             "macroParam": false,
@@ -293,7 +293,7 @@
             ]
         },
         {
-            "controlIndex": 9,
+            "controlIndex": 45,
             "mappedParam": 99,
             "paramHash": "6966544b6020",
             "macroParam": false,
@@ -325,7 +325,7 @@
             ]
         },
         {
-            "controlIndex": 10,
+            "controlIndex": 46,
             "mappedParam": 94,
             "paramHash": "6c255e162314",
             "macroParam": false,
@@ -357,7 +357,7 @@
             ]
         },
         {
-            "controlIndex": 11,
+            "controlIndex": 47,
             "mappedParam": 95,
             "paramHash": "18220e251910",
             "macroParam": false,
@@ -389,39 +389,7 @@
             ]
         },
         {
-            "controlIndex": 12,
-            "mappedParam": 2,
-            "paramHash": "087e25365908",
-            "macroParam": false,
-            "minValue": 0,
-            "maxValue": 16383,
-            "controlName": "Osc 1 Tune",
-            "colorScheme": 64,
-            "hapticMode": 2,
-            "hapticIndent1": 255,
-            "hapticIndent2": 255,
-            "hapticSteps": 0,
-            "stepNames": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-            ]
-        },
-        {
-            "controlIndex": 13,
+            "controlIndex": 8,
             "mappedParam": 1,
             "paramHash": "060c5c223d72",
             "macroParam": false,
@@ -485,7 +453,7 @@
             ]
         },
         {
-            "controlIndex": 15,
+            "controlIndex": 11,
             "mappedParam": 14,
             "paramHash": "33087d0b444e",
             "macroParam": false,
@@ -517,7 +485,7 @@
             ]
         },
         {
-            "controlIndex": 16,
+            "controlIndex": 12,
             "mappedParam": 15,
             "paramHash": "3500186f3d50",
             "macroParam": false,
@@ -549,7 +517,7 @@
             ]
         },
         {
-            "controlIndex": 17,
+            "controlIndex": 13,
             "mappedParam": 16,
             "paramHash": "675c09471e3e",
             "macroParam": false,
@@ -581,39 +549,7 @@
             ]
         },
         {
-            "controlIndex": 18,
-            "mappedParam": 8,
-            "paramHash": "104e34191b0e",
-            "macroParam": false,
-            "minValue": 0,
-            "maxValue": 16383,
-            "controlName": "Osc 3 Tune",
-            "colorScheme": 64,
-            "hapticMode": 2,
-            "hapticIndent1": 255,
-            "hapticIndent2": 255,
-            "hapticSteps": 0,
-            "stepNames": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-            ]
-        },
-        {
-            "controlIndex": 19,
+            "controlIndex": 15,
             "mappedParam": 7,
             "paramHash": "1032605b7077",
             "macroParam": false,
@@ -645,7 +581,7 @@
             ]
         },
         {
-            "controlIndex": 20,
+            "controlIndex": 17,
             "mappedParam": 22,
             "paramHash": "4f741c606f1d",
             "macroParam": false,
@@ -677,7 +613,7 @@
             ]
         },
         {
-            "controlIndex": 21,
+            "controlIndex": 18,
             "mappedParam": 23,
             "paramHash": "742201011832",
             "macroParam": false,
@@ -709,13 +645,13 @@
             ]
         },
         {
-            "controlIndex": 22,
+            "controlIndex": 1,
             "mappedParam": 41,
             "paramHash": "7433111d2c6c",
             "macroParam": false,
             "minValue": 0,
             "maxValue": 16383,
-            "controlName": "FilterReso",
+            "controlName": "FILTER RES",
             "colorScheme": 64,
             "hapticMode": 0,
             "hapticIndent1": 255,
@@ -741,13 +677,13 @@
             ]
         },
         {
-            "controlIndex": 23,
+            "controlIndex": 4,
             "mappedParam": 39,
             "paramHash": "0f031d790454",
             "macroParam": false,
             "minValue": 0,
             "maxValue": 16383,
-            "controlName": "FilterSpacin",
+            "controlName": "FILT SPACE",
             "colorScheme": 64,
             "hapticMode": 2,
             "hapticIndent1": 255,
@@ -773,13 +709,13 @@
             ]
         },
         {
-            "controlIndex": 24,
+            "controlIndex": 2,
             "mappedParam": 42,
             "paramHash": "644c79312241",
             "macroParam": false,
             "minValue": 0,
             "maxValue": 16383,
-            "controlName": "FilterEnvAmt",
+            "controlName": "F ENV AMT",
             "colorScheme": 64,
             "hapticMode": 2,
             "hapticIndent1": 255,
@@ -805,13 +741,13 @@
             ]
         },
         {
-            "controlIndex": 25,
+            "controlIndex": 48,
             "mappedParam": 43,
             "paramHash": "524a005b6510",
             "macroParam": false,
             "minValue": 0,
             "maxValue": 16383,
-            "controlName": "FiltKeyTrack",
+            "controlName": "F KEY TRACK",
             "colorScheme": 64,
             "hapticMode": 2,
             "hapticIndent1": 255,
@@ -837,7 +773,7 @@
             ]
         },
         {
-            "controlIndex": 26,
+            "controlIndex": 3,
             "mappedParam": 44,
             "paramHash": "290f0c261e77",
             "macroParam": false,
@@ -869,13 +805,13 @@
             ]
         },
         {
-            "controlIndex": 27,
+            "controlIndex": 49,
             "mappedParam": 45,
             "paramHash": "6246401c5735",
             "macroParam": false,
             "minValue": 0,
             "maxValue": 16383,
-            "controlName": "HP Env Amt",
+            "controlName": "HP ENV AMT",
             "colorScheme": 64,
             "hapticMode": 2,
             "hapticIndent1": 255,
@@ -901,13 +837,13 @@
             ]
         },
         {
-            "controlIndex": 28,
+            "controlIndex": 5,
             "mappedParam": 174,
             "paramHash": "0b0052650b21",
             "macroParam": false,
             "minValue": 0,
             "maxValue": 16383,
-            "controlName": "Stereo Sprea",
+            "controlName": "STEREO SPRD",
             "colorScheme": 64,
             "hapticMode": 0,
             "hapticIndent1": 255,
@@ -933,13 +869,13 @@
             ]
         },
         {
-            "controlIndex": 29,
+            "controlIndex": 50,
             "mappedParam": 110,
             "paramHash": "4602571f1c49",
             "macroParam": false,
             "minValue": 0,
             "maxValue": 16383,
-            "controlName": "Master Trim",
+            "controlName": "MASTER TRIM",
             "colorScheme": 64,
             "hapticMode": 0,
             "hapticIndent1": 255,
@@ -965,13 +901,13 @@
             ]
         },
         {
-            "controlIndex": 30,
+            "controlIndex": 7,
             "mappedParam": 109,
             "paramHash": "672f696a0778",
             "macroParam": false,
             "minValue": 0,
             "maxValue": 16383,
-            "controlName": "Master Volum",
+            "controlName": "MASTER VOL",
             "colorScheme": 64,
             "hapticMode": 0,
             "hapticIndent1": 255,
@@ -997,13 +933,13 @@
             ]
         },
         {
-            "controlIndex": 31,
+            "controlIndex": 51,
             "mappedParam": 115,
             "paramHash": "527165737f18",
             "macroParam": false,
             "minValue": 0,
             "maxValue": 16383,
-            "controlName": "Master Pan",
+            "controlName": "MASTER PAN",
             "colorScheme": 64,
             "hapticMode": 0,
             "hapticIndent1": 255,
@@ -1029,13 +965,13 @@
             ]
         },
         {
-            "controlIndex": 32,
+            "controlIndex": 39,
             "mappedParam": 175,
             "paramHash": "442d737d6a23",
             "macroParam": false,
             "minValue": 0,
             "maxValue": 16383,
-            "controlName": "Stereo Panne",
+            "controlName": "STEREO PAN",
             "colorScheme": 64,
             "hapticMode": 0,
             "hapticIndent1": 255,
@@ -1061,13 +997,13 @@
             ]
         },
         {
-            "controlIndex": 33,
+            "controlIndex": 23,
             "mappedParam": 40,
             "paramHash": "625814043e1f",
             "macroParam": false,
             "minValue": 0,
             "maxValue": 16383,
-            "controlName": "LF Width Trk",
+            "controlName": "LF WIDTH",
             "colorScheme": 64,
             "hapticMode": 0,
             "hapticIndent1": 255,
@@ -1093,7 +1029,7 @@
             ]
         },
         {
-            "controlIndex": 34,
+            "controlIndex": 6,
             "mappedParam": 168,
             "paramHash": "086362601c5f",
             "macroParam": false,
@@ -1125,7 +1061,7 @@
             ]
         },
         {
-            "controlIndex": 35,
+            "controlIndex": 20,
             "mappedParam": 116,
             "paramHash": "42532c440a17",
             "macroParam": false,
@@ -1157,7 +1093,7 @@
             ]
         },
         {
-            "controlIndex": 36,
+            "controlIndex": 19,
             "mappedParam": 120,
             "paramHash": "125e7f51295c",
             "macroParam": false,
@@ -1189,13 +1125,45 @@
             ]
         },
         {
-            "controlIndex": 37,
+            "controlIndex": 21,
             "mappedParam": 122,
             "paramHash": "714056027c69",
             "macroParam": false,
             "minValue": 0,
             "maxValue": 16383,
-            "controlName": "PitchBendDow",
+            "controlName": "BEND DOWN",
+            "colorScheme": 64,
+            "hapticMode": 0,
+            "hapticIndent1": 255,
+            "hapticIndent2": 255,
+            "hapticSteps": 0,
+            "stepNames": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "controlIndex": 22,
+            "mappedParam": 121,
+            "paramHash": "787d564f0a12",
+            "macroParam": false,
+            "minValue": 0,
+            "maxValue": 16383,
+            "controlName": "BEND UP",
             "colorScheme": 64,
             "hapticMode": 0,
             "hapticIndent1": 255,
@@ -1222,38 +1190,6 @@
         },
         {
             "controlIndex": 38,
-            "mappedParam": 121,
-            "paramHash": "787d564f0a12",
-            "macroParam": false,
-            "minValue": 0,
-            "maxValue": 16383,
-            "controlName": "Pitch Bend U",
-            "colorScheme": 64,
-            "hapticMode": 0,
-            "hapticIndent1": 255,
-            "hapticIndent2": 255,
-            "hapticSteps": 0,
-            "stepNames": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-            ]
-        },
-        {
-            "controlIndex": 39,
             "mappedParam": 101,
             "paramHash": "477960472f0c",
             "macroParam": false,
@@ -1285,13 +1221,13 @@
             ]
         },
         {
-            "controlIndex": 40,
+            "controlIndex": 24,
             "mappedParam": 52,
             "paramHash": "23075b485114",
             "macroParam": false,
             "minValue": 0,
             "maxValue": 16383,
-            "controlName": "Filter Attac",
+            "controlName": "F ENV ATK",
             "colorScheme": 26,
             "hapticMode": 0,
             "hapticIndent1": 255,
@@ -1317,13 +1253,13 @@
             ]
         },
         {
-            "controlIndex": 41,
+            "controlIndex": 25,
             "mappedParam": 53,
             "paramHash": "445763325519",
             "macroParam": false,
             "minValue": 0,
             "maxValue": 16383,
-            "controlName": "Filter Decay",
+            "controlName": "F ENV DEC",
             "colorScheme": 21,
             "hapticMode": 0,
             "hapticIndent1": 255,
@@ -1349,13 +1285,13 @@
             ]
         },
         {
-            "controlIndex": 42,
+            "controlIndex": 26,
             "mappedParam": 54,
             "paramHash": "2a3e7d5e075d",
             "macroParam": false,
             "minValue": 0,
             "maxValue": 16383,
-            "controlName": "FilterSustai",
+            "controlName": "F ENV SUS",
             "colorScheme": 5,
             "hapticMode": 0,
             "hapticIndent1": 255,
@@ -1381,13 +1317,13 @@
             ]
         },
         {
-            "controlIndex": 43,
+            "controlIndex": 27,
             "mappedParam": 55,
             "paramHash": "275f55607e69",
             "macroParam": false,
             "minValue": 0,
             "maxValue": 16383,
-            "controlName": "FilterReleas",
+            "controlName": "F ENV REL",
             "colorScheme": 15,
             "hapticMode": 0,
             "hapticIndent1": 255,
@@ -1413,13 +1349,13 @@
             ]
         },
         {
-            "controlIndex": 44,
+            "controlIndex": 36,
             "mappedParam": 108,
             "paramHash": "3e684d042e2e",
             "macroParam": false,
             "minValue": 0,
             "maxValue": 16383,
-            "controlName": "Vel to Filte",
+            "controlName": "VEL FILTER",
             "colorScheme": 64,
             "hapticMode": 0,
             "hapticIndent1": 255,
@@ -1445,13 +1381,13 @@
             ]
         },
         {
-            "controlIndex": 45,
+            "controlIndex": 28,
             "mappedParam": 62,
             "paramHash": "640d63516317",
             "macroParam": false,
             "minValue": 0,
             "maxValue": 16383,
-            "controlName": "Amp Attack",
+            "controlName": "AMP ENV ATK",
             "colorScheme": 64,
             "hapticMode": 0,
             "hapticIndent1": 255,
@@ -1477,13 +1413,13 @@
             ]
         },
         {
-            "controlIndex": 46,
+            "controlIndex": 29,
             "mappedParam": 63,
             "paramHash": "5e2a396b640a",
             "macroParam": false,
             "minValue": 0,
             "maxValue": 16383,
-            "controlName": "Amp Decay",
+            "controlName": "AMP ENV DEC",
             "colorScheme": 64,
             "hapticMode": 0,
             "hapticIndent1": 255,
@@ -1509,13 +1445,13 @@
             ]
         },
         {
-            "controlIndex": 47,
+            "controlIndex": 30,
             "mappedParam": 64,
             "paramHash": "3b6c4c2f2131",
             "macroParam": false,
             "minValue": 0,
             "maxValue": 16383,
-            "controlName": "Amp Sustain",
+            "controlName": "AMP ENV SUS",
             "colorScheme": 64,
             "hapticMode": 0,
             "hapticIndent1": 255,
@@ -1541,18 +1477,18 @@
             ]
         },
         {
-            "controlIndex": 48,
+            "controlIndex": 31,
             "mappedParam": 65,
             "paramHash": "7108503b7318",
             "macroParam": false,
             "minValue": 0,
             "maxValue": 16383,
-            "controlName": "Amp Release",
+            "controlName": "AMP ENV REL",
             "colorScheme": 72,
-            "hapticMode": 1,
+            "hapticMode": 0,
             "hapticIndent1": 255,
             "hapticIndent2": 255,
-            "hapticSteps": 2,
+            "hapticSteps": 0,
             "stepNames": [
                 "",
                 "",
@@ -1573,13 +1509,13 @@
             ]
         },
         {
-            "controlIndex": 49,
+            "controlIndex": 37,
             "mappedParam": 107,
             "paramHash": "19527a59731a",
             "macroParam": false,
             "minValue": 0,
             "maxValue": 16383,
-            "controlName": "Vel to Amp",
+            "controlName": "VEL AMP",
             "colorScheme": 67,
             "hapticMode": 0,
             "hapticIndent1": 255,
@@ -1605,17 +1541,17 @@
             ]
         },
         {
-            "controlIndex": 50,
+            "controlIndex": 32,
             "mappedParam": 72,
             "paramHash": "10044c474172",
             "macroParam": false,
             "minValue": 0,
             "maxValue": 16383,
-            "controlName": "ModEnvAttack",
+            "controlName": "MOD ENV ATK",
             "colorScheme": 64,
             "hapticMode": 0,
-            "hapticIndent1": 64,
-            "hapticIndent2": 64,
+            "hapticIndent1": 255,
+            "hapticIndent2": 255,
             "hapticSteps": 0,
             "stepNames": [
                 "",
@@ -1637,13 +1573,13 @@
             ]
         },
         {
-            "controlIndex": 51,
+            "controlIndex": 33,
             "mappedParam": 73,
             "paramHash": "5b3a61012134",
             "macroParam": false,
             "minValue": 0,
             "maxValue": 16383,
-            "controlName": "Mod Env Deca",
+            "controlName": "MOD ENV DEC",
             "colorScheme": 29,
             "hapticMode": 0,
             "hapticIndent1": 255,
@@ -1669,13 +1605,13 @@
             ]
         },
         {
-            "controlIndex": 52,
+            "controlIndex": 34,
             "mappedParam": 74,
             "paramHash": "066977616a20",
             "macroParam": false,
             "minValue": 0,
             "maxValue": 16383,
-            "controlName": "ModEnvSustai",
+            "controlName": "MOD ENV SUS",
             "colorScheme": 74,
             "hapticMode": 0,
             "hapticIndent1": 255,
@@ -1701,13 +1637,13 @@
             ]
         },
         {
-            "controlIndex": 53,
+            "controlIndex": 35,
             "mappedParam": 75,
             "paramHash": "14432d1c324c",
             "macroParam": false,
             "minValue": 0,
             "maxValue": 16383,
-            "controlName": "ModEnvReleas",
+            "controlName": "MOD ENV REL",
             "colorScheme": 14,
             "hapticMode": 0,
             "hapticIndent1": 255,
@@ -1735,12 +1671,12 @@
     ],
     "buttons": [
         {
-            "controlIndex": 0,
+            "controlIndex": 40,
             "mappedParam": 84,
             "paramHash": "387b140b2771",
             "minValue": 0,
             "maxValue": 127,
-            "controlName": "LFO 1 Wavefo",
+            "controlName": "LFO1 WAVE",
             "colorScheme": 64,
             "ledOnColor": 13,
             "ledOffColor": 70,
@@ -1766,7 +1702,7 @@
             ]
         },
         {
-            "controlIndex": 1,
+            "controlIndex": 8,
             "mappedParam": 1,
             "paramHash": "060c5c223d72",
             "minValue": 0,
@@ -1797,7 +1733,7 @@
             ]
         },
         {
-            "controlIndex": 2,
+            "controlIndex": 10,
             "mappedParam": 4,
             "paramHash": "4d74493f2266",
             "minValue": 0,
@@ -1828,7 +1764,7 @@
             ]
         },
         {
-            "controlIndex": 3,
+            "controlIndex": 15,
             "mappedParam": 7,
             "paramHash": "1032605b7077",
             "minValue": 0,
@@ -1859,12 +1795,12 @@
             ]
         },
         {
-            "controlIndex": 4,
+            "controlIndex": 44,
             "mappedParam": 93,
             "paramHash": "5c4c5b2f3469",
             "minValue": 0,
             "maxValue": 127,
-            "controlName": "LFO 2 Wavefo",
+            "controlName": "LFO2 WAVE",
             "colorScheme": 64,
             "ledOnColor": 13,
             "ledOffColor": 70,
@@ -1890,7 +1826,7 @@
             ]
         },
         {
-            "controlIndex": 5,
+            "controlIndex": 9,
             "mappedParam": 0,
             "paramHash": "3328064e1e13",
             "minValue": 0,
@@ -1921,7 +1857,7 @@
             ]
         },
         {
-            "controlIndex": 6,
+            "controlIndex": 11,
             "mappedParam": 3,
             "paramHash": "040e6675154f",
             "minValue": 0,
@@ -1952,7 +1888,7 @@
             ]
         },
         {
-            "controlIndex": 7,
+            "controlIndex": 16,
             "mappedParam": 6,
             "paramHash": "3b4f2e723112",
             "minValue": 0,
@@ -1983,12 +1919,12 @@
             ]
         },
         {
-            "controlIndex": 8,
+            "controlIndex": 0,
             "mappedParam": 48,
             "paramHash": "5e6d07723d4a",
             "minValue": 0,
             "maxValue": 127,
-            "controlName": "Filter Type",
+            "controlName": "FILTER TYPE",
             "colorScheme": 64,
             "ledOnColor": 13,
             "ledOffColor": 70,
@@ -2014,12 +1950,12 @@
             ]
         },
         {
-            "controlIndex": 32,
+            "controlIndex": 38,
             "mappedParam": 102,
             "paramHash": "3a5d24737d78",
             "minValue": 0,
             "maxValue": 127,
-            "controlName": "LFO 3 Wavefo",
+            "controlName": "LFO3 WAVE",
             "colorScheme": 64,
             "ledOnColor": 13,
             "ledOffColor": 70,
@@ -2038,37 +1974,6 @@
                 "90",
                 "122",
                 "127",
-                "",
-                "",
-                "",
-                ""
-            ]
-        },
-        {
-            "controlIndex": 33,
-            "mappedParam": 63,
-            "paramHash": "5e2a396b640a",
-            "minValue": 0,
-            "maxValue": 127,
-            "controlName": "Amp Decay",
-            "colorScheme": 64,
-            "ledOnColor": 13,
-            "ledOffColor": 70,
-            "hapticMode": 0,
-            "hapticSteps": 0,
-            "stepNames": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
                 "",
                 "",
                 "",
