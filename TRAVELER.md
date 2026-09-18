@@ -1,53 +1,54 @@
-# Traveler mapping for Roto-Control
+# Traveler mappings for Roto-Control
 
-`Traveler-Roto-Control.json` is a four-page Roto-Control MIDI setup for the KeySolutions Sounds Traveler software synthesizer. It prioritizes synthesis and live performance over effects, deep modulation-matrix editing, and sequencing.
+Two Traveler setups are provided:
 
-## Why this is a MIDI setup
+- `Traveler-Roto-Control.json` — the primary native Roto **PLUGIN** mapping. It uses Traveler's real plugin hash and exact host parameter identities from the expanded user export.
+- `Traveler-Roto-Control-MIDI.json` — the earlier four-page **MIDI** fallback for hosts where native plugin recognition is unavailable. It requires Traveler MIDI Learn.
 
-The supplied `Traveler.json` is a valid native Roto `PLUGIN` mapping, but contains only four encoders and three buttons. A native mapping requires Traveler's exact host parameter index and a hash derived from the host's exact parameter name. The seven supplied records verify that format, but Traveler's guide does not publish the complete host parameter list, so inventing the remaining identities would produce an unreliable file.
+## Native PLUGIN mapping
 
-Traveler instead documents per-control **MIDI Learn** and persistent **Global MIDI CC** assignments. This setup therefore uses coarse 7-bit CC on channel 1 and can be completely configured from Traveler itself.
+The native file contains 54 encoder mappings and 11 button mappings across seven pages. Roto-Control can recognize Traveler by plugin hash `081a7b2c68303a52`, bind the exported host parameters directly, display their values, and use host feedback for motor recall.
 
-## Pages
+| Page | Encoder focus | Buttons |
+| --- | --- | --- |
+| 1 | Filter cutoff; Osc 1–3 tuning; LFO 1 rate, fade, pitch, and filter depth | LFO 1 waveform; Osc 1–3 waveform selectors; LFO 2 waveform; Osc 1–3 octave |
+| 2 | LFO 2 rate, fade, pitch, and filter depth; Osc 1 wave/tune; FM depth; Osc 2 voices | Filter Type at the first slot |
+| 3 | Osc 2 detune/spread; Osc 3 tune, wave, detune, and spread; filter resonance and spacing | — |
+| 4 | Filter envelope amount, key tracking, HP cutoff/envelope amount; stereo spread; master trim, volume, and pan | — |
+| 5 | Stereo panner, LF width, Vintage, Glide, global Detune, pitch-bend ranges, LFO 3 rate | LFO 3 waveform; Amp Decay |
+| 6 | Filter ADSR, velocity-to-filter, and Amp attack/decay/sustain | — |
+| 7 | Amp release, velocity-to-amp, and Mod Envelope ADSR | — |
 
-| Page | Encoders (left to right) | Buttons (left to right) | CCs |
-| --- | --- | --- | --- |
-| 1 — Performance | Filter Cutoff, Resonance, Env Amount, HP Cutoff, Drive, Feedback, Pan Spread, Vintage | Filter Type, Bass Compensation, HP Link, Voice Mode, Voices, Limiter, Random Pan, Arp On | Knobs 1–8; buttons 9–16 |
-| 2 — Oscillators | Osc 1/2/3 Wave, Osc 1/2/3 Level, Noise Level, Osc 2 Detune | Osc 1/2/3 Octave, Osc Sync, Osc 2 Voices, Osc 3 WT, Duo, Key Track | Knobs 17–24; buttons 25–32 |
-| 3 — Envelopes | Filter ADSR, Amp ADSR | Osc 1/2/3 Mute, Noise Type, Retrigger, Arp Latch, Arp Pedal, Mod Alt Control | Knobs 33–40; buttons 41–48 |
-| 4 — Motion | LFO 1 Rate, Filter, Pitch, Fade, Filter Spacing, Filter Spread, Glide, LF Width | LFO 1 Key Sync/Poly/Clock, LFO 2 Key Sync/Poly/Clock, LFO 3 Key Sync/Clock | Knobs 49–56; buttons 57–64 |
+The layout intentionally preserves the expanded export's page positions, haptic configuration, ranges, labels, and any duplicate convenience mappings. Some exported step names are blank because the host supplied a step count without readable state labels; these were not guessed.
 
-Filter Env Amount and Filter Spacing are bipolar and use Roto's centered haptic mode. Continuous parameters use smooth encoders. Enumerated parameters use stepped buttons with the exact states documented by Traveler, including six filter models, six oscillator octaves, 1–7 Oscillator 2 voices, and 1–16 performance voices.
+### Import
 
-## Import and MIDI Learn
+1. Install Roto-Control's integration for your DAW using the current Melbourne Instruments Roto-Setup application.
+2. Open Roto-Setup and import `Traveler-Roto-Control.json` as a **PLUGIN** template.
+3. Load Traveler in the same supported host used to create the export (the parameter indices follow the host-visible Traveler parameter list).
+4. Select the Traveler device and confirm that Roto-Control recalls the mapping and that the motors follow parameter values.
+5. Test tuning, bipolar controls, waveform selectors, octaves, and the filter selector before using the template in a performance.
 
-1. Open Melbourne Instruments **Roto-Setup**, select a MIDI setup slot, then choose **File → Import** and import `Traveler-Roto-Control.json`.
-2. In Traveler, set **Settings → MIDI Channel** to `Channel 1` or `Omni`.
-3. For each desired mapping, Control-click/right-click the Traveler control, choose **MIDI Learn**, then move or press the same-named Roto control.
-4. Control-click/right-click the Traveler control again and choose **Global MIDI CC**. Alternatively, after learning the controls, use **Settings → MIDI CC Assignments → Make Current Assignments Global**.
-5. Test every stepped control through all states. If Traveler interprets a toggle in the opposite direction, reverse that assignment in Roto-Setup or relearn it as appropriate.
+Native parameter mappings can be version-sensitive. If a future Traveler release changes its exposed parameter names or order, uniquely named parameters can still resolve by hash, while duplicate names may require the original index to remain stable.
 
-The MIDI setup sends CC 1–64 on channel 1 with no collisions. CC 74 is deliberately unused so it remains available for MPE slide. Motorized value feedback depends on Traveler or the host returning matching MIDI CC messages; the Traveler guide documents MIDI input learning but does not promise controller feedback.
+## MIDI fallback
 
-## Mapping choices and omissions
-
-Page 1 contains the controls most likely to shape a sound during performance. Page 2 covers oscillator timbre and layer balance. Page 3 makes articulation and source muting readily available. Page 4 covers movement and stereo width.
-
-Effects were omitted to keep the setup synthesis-focused. Oscillator tuning was omitted to prevent accidental pitch changes. The 21-slot modulation matrix, control-track steps, wavetable selection, and arpeggiator direction/speed offer more choices than a concise four-page performance layout can expose; they remain available in Traveler or can replace less useful controls in Roto-Setup.
+Import `Traveler-Roto-Control-MIDI.json` into a MIDI setup slot if the host cannot use the native plugin template. Set Traveler to MIDI channel 1 or Omni, use its per-control **MIDI Learn**, then choose **Global MIDI CC** or **Settings → MIDI CC Assignments → Make Current Assignments Global**. The fallback sends unique channel-1 CCs 1–64 and deliberately leaves CC 74 free for MPE slide.
 
 ## Sources and assumptions
 
 - [Traveler User's Guide](https://www.keysolutionssounds.com/wp-content/uploads/Traveler_Users_Guide.pdf) — parameter names, ranges, enumerated states, MIDI Learn, Global MIDI CC, and MIDI-channel setup.
-- User-supplied `Traveler.json` — verified Roto plugin structure and existing Traveler identities, plus centered and stepped haptic conventions.
+- User-supplied `Traveler.json` and expanded `Traveler-moreoptions.json` exports — source of the exact plugin hash, host parameter indices, parameter hashes, page positions, ranges, and haptic settings.
 - [Melbourne Instruments MIDI helper](https://www.melbourneinstruments.com/s/MIDI-HELPER.json) and Roto-Control manual — MIDI JSON structure and control constraints.
 - [Community Roto templates](https://github.com/seee-m/Roto-Control-Templates), [rotocontrol-nickel](https://github.com/wyager/rotocontrol-nickel), and [TheGreatElemonade mappings](https://github.com/MrMatch246/RotoControlMappings/tree/main/TheGreatElemonade) — cross-checked haptic modes, step labels, ranges, and hardware label length.
 
-Traveler's guide describes MIDI Learn but does not publish factory CC assignments, NRPN addresses, or the complete native host parameter order. The CC assignments in this file are therefore an intentional controller layout, not claimed Traveler defaults.
+The native mapping contains only identities captured in the supplied export; no host parameter indices or hashes were invented. The fallback CC assignments are intentional controller assignments, not claimed Traveler factory defaults.
 
 ## Validation
 
 ```sh
 jq empty Traveler-Roto-Control.json
+jq empty Traveler-Roto-Control-MIDI.json
 ```
 
-The file is also checked for the official MIDI-helper field structure, 32 knobs and 32 buttons, sequential indices, unique channel-1 CCs 1–64, legal 7-bit ranges, hardware-sized labels, valid haptic combinations, and exactly 16 strings in every `stepNames` array.
+The native file is checked for the supplied PLUGIN schema, matching Traveler/plugin hashes, legal control indices and normalized ranges, valid parameter hashes, and exactly 16 strings in every `stepNames` array. The fallback retains the official MIDI-helper field structure, 32 knobs and 32 buttons, and unique channel-1 CCs 1–64.
