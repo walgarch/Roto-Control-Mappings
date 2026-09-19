@@ -70,3 +70,7 @@ jq empty Erae-Sound-Roto-Control.json
 ```
 
 The implementation was additionally checked for the official helper's object/field structure, 32 knobs and 32 buttons, sequential `0..31` indices, channel-1 CCs `1..64` with no collisions, legal 7-bit ranges, short labels, valid haptic combinations, and exactly 16 strings in every `stepNames` array. Intentional differences from the helper are the labels, centered/stepped encoder haptics, functional colors, and normalized first button bank.
+
+## License and independence
+
+This is an independent community project, not an official vendor repository. See the [project notice](NOTICE.md) for compatibility, trademark, and provenance information. Original contributions are available under the [MIT License](LICENSE).
