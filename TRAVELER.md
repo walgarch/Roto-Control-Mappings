@@ -41,20 +41,20 @@ Native parameter mappings can be version-sensitive. If a future Traveler release
 
 ## Experimental screenshot-informed PLUGIN mapping
 
-`Traveler-Roto-Control-Trial.json` is the mapping to test against the current Traveler UI. It retains the exact plugin hash and only `(mappedParam, paramHash)` identities present in the three supplied exports, but reorganizes them according to the screenshots. It has 64 knobs and 10 genuine binary buttons; unused button slots remain absent.
+`Traveler-Roto-Control-Trial.json` is the mapping to test against the current Traveler UI. It retains the exact plugin hash and only `(mappedParam, paramHash)` identities present in the four supplied exports, but reorganizes them according to the screenshots. It has 64 knobs and 29 genuine binary buttons; unused button slots remain absent.
 
 | Page | Knobs, left to right | Buttons |
 | --- | --- | --- |
-| 1 — Oscillators 1/2 + noise | Osc 1 Frequency, Osc 1 Octave, Osc 2 Frequency, Osc 2 Octave, Osc 2 Voices, Osc 2 Detune, Noise Level, Noise Type | Noise Enable |
-| 2 — Oscillator 3 + performance | Osc 3 Frequency, Osc 3 Octave, Osc 3 Detune, Osc 3 Spread, Glide, Detune, Bend Down, Bend Up | — |
+| 1 — Oscillators 1/2 + noise | Osc 1 Frequency, Osc 1 Octave, Osc 2 Frequency, Osc 2 Octave, Osc 2 Voices, Osc 2 Detune, Noise Level, Noise Type | 1-2 Sync, 2-1 FM, 3-1 FM, Exp/Lin, Noise Enable |
+| 2 — Oscillator 3 + performance | Osc 3 Frequency, Osc 3 Octave, Osc 3 Detune, Performance Voice Count, Glide, Detune, Bend Down, Bend Up | 3KB, WT, 3LO, DUO |
 | 3 — Filters | Type, Cutoff, Resonance, Spacing, Env Amount, Keyboard Amount, HP Cutoff, HP Env Amount | Filter Link, Bass Compensation |
 | 4 — Filter/VCA envelopes | Filter A/D/S/R, VCA A/D/S/R | — |
-| 5 — Mod envelope + LFO 3 | Filter Velocity, VCA Velocity, Mod A/D/S/R, LFO 3 Wave, LFO 3 Rate | — |
-| 6 — LFO 1/2 | LFO 1 Wave/Rate/Pitch/Filter, LFO 2 Wave/Rate/Pitch/Filter | — |
+| 5 — Mod envelope + LFO 3 | Filter Velocity, VCA Velocity, Mod A/D/S/R, LFO 3 Wave, LFO 3 Rate | LFO 3 Key Sync, Poly, Clock |
+| 6 — LFO 1/2 | LFO 1 Wave/Rate/Pitch/Filter, LFO 2 Wave/Rate/Pitch/Filter | Key Sync, Poly, Clock for each LFO |
 | 7 — Mixer | Osc 1 Level/Pan, Osc 2 Level/Pan, Osc 3 Level/Pan, Feedback, Drive | Osc 1/2/3 Enable |
-| 8 — Arp + primary output | Direction, Range, Speed, Destination, Gate, Swing, Main Volume, Main Pan | Arp Enable/Latch, Limiter, Pan Random |
+| 8 — Arp + primary output | Direction, Range, Speed, Destination, Gate, Swing, Main Volume, Main Pan | Arp Enable, Latch, Pedal, Mod Env; Limiter, Pan Random |
 
-Mixer level and pan are adjacent for each oscillator, matching the pan sliders directly beneath the three level knobs. `KEYBOARD AMT` replaces the misleading Key Track label: it controls how much the low-pass cutoff follows keyboard pitch. Noise Type is a two-state White/Pink selector. Osc 2 Voices is the exported oscillator-unison control with states 1–7; it is distinct from the separate Performance Voices dropdown.
+Mixer level and pan are adjacent for each oscillator, matching the pan sliders directly beneath the three level knobs. `KEYBOARD AMT` replaces the misleading Key Track label: it controls how much the low-pass cutoff follows keyboard pitch. Noise Type is a two-state White/Pink selector. Osc 2 Voices is the exported oscillator-unison control with states 1–7; the separate Performance Voice Count uses the screenshot-verified states 1–8 and 16.
 
 Every captured multi-state dropdown is a knob. Octave and Filter Type use six tactile steps, Arp Range four, Arp Speed sixteen, Arp Destination eleven, Arp Direction twenty, and each LFO Wave twenty-one. PLUGIN mappings can store only 16 display labels: LFO positions 17–21 (`Slew RND UNI`, `Slew RND Wide`, `Slew RND Wide UNI`, `S&H`, `S&H UNI`) and Arp Direction positions 17–20 (`Leapfrog`, `Anchor`, `Spiral`, `Pinwheel`) therefore retain tactile positions but appear numerically rather than by name on Roto-Control.
 
@@ -62,8 +62,9 @@ Every captured multi-state dropdown is a knob. Octave and Filter Type use six ta
 
 - The three exported identities named `Osc 1/2/3 Wave` are deliberately absent. The screenshots show continuous Wave/WT controls, not the previously inferred oscillator waveform dropdowns, and the owner has rejected those inferred mappings.
 - Filter Envelope Break and Sustain Level, VCA Alternate Control, the MOD 1/2/3 routing section, and arp Tempo are excluded as requested.
-- Performance Voices (1–8, 16), Arp Pedal, Arp Mod Env, LFO Key Sync/Poly/Clock, oscillator mode toggles, Osc 3 WT Position, and the 3KB/WT/3LO/DUO controls are visible in the UI but absent from the supplied exports. No native identities were invented for them.
-- The 64-knob limit also leaves out Osc 2 Spread, FM Depth, filter/output Spread, LFO 1/2 Fade, Amp/Master Trim, LF Width, and Vintage. These are capacity choices, not claims that the parameters are unsupported.
+- The fourth export now supplies exact identities for Performance Voice Count, Arp Pedal/Mod Env, all LFO Key Sync/Poly/Clock toggles, oscillator sync/FM mode toggles, and 3KB/WT/3LO/DUO. Its duplicate `3 WT Bank` entries share one identity and provide no state count or labels, so that ambiguous wavetable-bank control remains omitted.
+- Osc 3 WT Position is visible in the UI but still absent from the supplied exports. No native identity was invented for it.
+- The 64-knob limit also leaves out Osc 2/3 Spread, FM Depth, filter/output Spread, LFO 1/2 Fade, Amp/Master Trim, LF Width, and Vintage. These are capacity choices, not claims that the parameters are unsupported.
 
 ### Glossary
 
@@ -79,14 +80,14 @@ Every captured multi-state dropdown is a knob. Octave and Filter Type use six ta
 3. Confirm automatic Traveler recognition and motor recall before editing parameters.
 4. On pages 1–3, verify octave, Noise Type, and Filter Type move through the UI states in the documented order. Confirm `KEYBOARD AMT` moves the filter's `KB TRK` control.
 5. On pages 5, 6, and 8, verify every stepped position. The final five LFO states and final four Direction states should remain selectable even though Roto shows numbers instead of names.
-6. Confirm each page-7 level is adjacent to its pan, and test all ten buttons as binary toggles. In particular, ensure Arp Enable/Latch are not confused with the unavailable Pedal/Mod Env toggles.
+6. Confirm each page-7 level is adjacent to its pan, and test all 29 buttons as binary toggles. In particular, verify the oscillator modes, all three LFO button groups, and all four arp toggles against the UI.
 7. If any control resolves to the wrong parameter, record its page, slot, displayed value, Traveler version, and host before restoring the primary template.
 
 ## Missing or ambiguous captures
 
 The expanded export resolves the mixer, drive/feedback, filter-link, bass-compensation, limiter, random-pan, oscillator-enable, and arpeggiator identities. It omits the previously captured Filter Cutoff identity, likely because the export reached its 64-encoder capacity; this essential control is retained from the prior export. LFO 3 Fade, Pitch, and Filter depth remain absent; they may not be host-exposed.
 
-The supplied exports did not identify the normalized value ordering for Noise Type, so its two stepped positions are intentionally unnamed. PLUGIN mode can name only 16 of the documented 21 LFO waveforms and 20 arp modes; later positions remain numeric on hardware. A device test is still needed to confirm that Traveler's host-normalized selector order matches the manual's displayed order.
+The exports alone did not identify the normalized value ordering for Noise Type, so the primary mapping retains unnamed positions; the experimental trial uses the later screenshot-verified White/Pink order. PLUGIN mode can name only 16 of the documented 21 LFO waveforms and 20 arp modes; later positions remain numeric on hardware. A device test is still needed to confirm that Traveler's host-normalized selector order matches the displayed order.
 
 ## MIDI fallback
 
@@ -95,7 +96,7 @@ Import `Traveler-Roto-Control-MIDI.json` into a MIDI setup slot if the host cann
 ## Sources and assumptions
 
 - [Traveler User's Guide](https://www.keysolutionssounds.com/wp-content/uploads/Traveler_Users_Guide.pdf) — parameter names, ranges, enumerated states, MIDI Learn, Global MIDI CC, and MIDI-channel setup.
-- User-supplied `Traveler.json`, `Traveler-moreoptions.json`, and `Traveler-moreoptions2.json` exports — source of the exact plugin hash, host parameter indices, parameter hashes, ranges, and haptic settings; the controls were then regrouped into performance pages here.
+- User-supplied `Traveler.json`, `Traveler-moreoptions.json`, `Traveler-moreoptions2.json`, and `Traveler-moreoptions3.json` exports — source of the exact plugin hash, host parameter indices, parameter hashes, ranges, and haptic settings; duplicate identities in the fourth export were deduplicated before controls were regrouped.
 - [Melbourne Instruments MIDI helper](https://www.melbourneinstruments.com/s/MIDI-HELPER.json) and Roto-Control manual — MIDI JSON structure and control constraints.
 - [Community Roto templates](https://github.com/seee-m/Roto-Control-Templates), [rotocontrol-nickel](https://github.com/wyager/rotocontrol-nickel), and [TheGreatElemonade mappings](https://github.com/MrMatch246/RotoControlMappings/tree/main/TheGreatElemonade) — cross-checked haptic modes, step labels, ranges, and hardware label length.
 
