@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "repository": "Roto-Control-Mappings",
+  "mappings": [
+    {
+      "id": "erae-sound-plugin",
+      "product": "Embodme Erae Sound",
+      "mode": "PLUGIN",
+      "status": "candidate",
+      "path": "mappings/erae-sound/plugin/erae-sound.json",
+      "documentation": "docs/erae-sound.md",
+      "pluginHash": "5d43192d07574151",
+      "allowedColors": [8, 29, 52, 60]
+    },
+    {
+      "id": "erae-sound-midi",
+      "product": "Embodme Erae Sound",
+      "mode": "MIDI",
+      "status": "fallback",
+      "path": "mappings/erae-sound/midi/erae-sound-midi.json",
+      "documentation": "docs/erae-sound.md",
+      "setupIndex": 7,
+      "allowedColors": [17, 64, 70],
+      "reservedCc": [74]
+    },
+    {
+      "id": "traveler-plugin",
+      "product": "Key Solutions Traveler",
+      "mode": "PLUGIN",
+      "status": "canonical",
+      "path": "mappings/traveler/plugin/traveler.json",
+      "documentation": "docs/traveler.md",
+      "pluginHash": "081a7b2c68303a52",
+      "allowedColors": [15, 16, 17, 64, 70]
+    },
+    {
+      "id": "traveler-midi",
+      "product": "Key Solutions Traveler",
+      "mode": "MIDI",
+      "status": "fallback",
+      "path": "mappings/traveler/midi/traveler-midi.json",
+      "documentation": "docs/traveler.md",
+      "setupIndex": 7,
+      "allowedColors": [15, 16, 17, 64, 70],
+      "reservedCc": [74]
+    },
+    {
+      "id": "traveler-native-v1",
+      "product": "Key Solutions Traveler",
+      "mode": "PLUGIN",
+      "status": "archive",
+      "path": "mappings/traveler/archive/traveler-native-v1.json",
+      "documentation": "mappings/traveler/archive/README.md",
+      "pluginHash": "081a7b2c68303a52",
+      "allowedColors": [15, 16, 17, 64, 70],
+      "supersededBy": "traveler-plugin"
+    },
+    {
+      "id": "traveler-trial-pre-rc",
+      "product": "Key Solutions Traveler",
+      "mode": "PLUGIN",
+      "status": "archive",
+      "path": "mappings/traveler/archive/traveler-trial-pre-rc.json",
+      "documentation": "mappings/traveler/archive/README.md",
+      "pluginHash": "081a7b2c68303a52",
+      "allowedColors": [15, 16, 17, 64, 70],
+      "duplicateOf": "traveler-plugin"
+    }
+  ]
+}
