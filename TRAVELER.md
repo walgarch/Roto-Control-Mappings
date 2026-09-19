@@ -1,9 +1,10 @@
 # Traveler mappings for Roto-Control
 
-Three Traveler setups are provided:
+Four Traveler setups are provided:
 
-- `Traveler-Roto-Control.json` — the primary native Roto **PLUGIN** mapping. It uses Traveler's real plugin hash and exact host parameter identities from the expanded user export.
-- `Traveler-Roto-Control-Trial.json` — an experimental native **PLUGIN** alternative organized from verified Traveler UI screenshots and owner corrections. It leaves the primary mapping unchanged.
+- `Traveler-Roto-Control-RC.json` — the recommended native **PLUGIN** release candidate, aligned with the owner's fixed hardware export while preserving verified selector labels and functional colors.
+- `Traveler-Roto-Control.json` — the earlier native Roto **PLUGIN** mapping. It uses Traveler's real plugin hash and exact host parameter identities from the expanded user export.
+- `Traveler-Roto-Control-Trial.json` — the experimental predecessor retained for comparison.
 - `Traveler-Roto-Control-MIDI.json` — the earlier four-page **MIDI** fallback for hosts where native plugin recognition is unavailable. It requires Traveler MIDI Learn.
 
 ## Native PLUGIN mapping
@@ -39,9 +40,11 @@ Two duplicate knob mappings and an accidental duplicate Amp Decay button from th
 
 Native parameter mappings can be version-sensitive. If a future Traveler release changes its exposed parameter names or order, uniquely named parameters can still resolve by hash, while duplicate names may require the original index to remain stable.
 
-## Experimental screenshot-informed PLUGIN mapping
+## Release Candidate PLUGIN mapping
 
-`Traveler-Roto-Control-Trial.json` is the mapping to test against the current Traveler UI. It retains the exact plugin hash and only `(mappedParam, paramHash)` identities present in the four supplied exports, but reorganizes them according to the screenshots. It has 62 knobs and 29 genuine binary buttons; unused slots remain absent where adding an unrelated control would weaken a page.
+`Traveler-Roto-Control-RC.json` is the mapping to test for release against the current Traveler UI. It retains the exact plugin hash and only `(mappedParam, paramHash)` identities present in the supplied exports, but reorganizes them according to the screenshots. It has 62 knobs and 29 genuine binary buttons; unused slots remain absent where adding an unrelated control would weaken a page.
+
+The owner's `Traveler-withfix.json` hardware export contains the same 91 native identities as the preceding trial—no new `(mappedParam, paramHash)` pair was introduced. The release candidate therefore uses that matching identity set as round-trip confirmation while correcting three metadata regressions in the attachment: blank LFO/Direction labels, rate labels placed on Arp Range, and Filter Decay's non-envelope color/label style.
 
 | Page | Knobs, left to right | Buttons |
 | --- | --- | --- |
@@ -58,7 +61,7 @@ All hardware labels now use normal capitalization, retaining uppercase only for 
 
 Every captured multi-state dropdown is a knob. Octave and Filter Type use six tactile steps, Arp Range four, Arp Speed sixteen, Arp Destination eleven, Arp Direction twenty, and each LFO Wave twenty-one. PLUGIN mappings can store only 16 display labels: LFO positions 17–21 (`Slew RND UNI`, `Slew RND Wide`, `Slew RND Wide UNI`, `S&H`, `S&H UNI`) and Arp Direction positions 17–20 (`Leapfrog`, `Anchor`, `Spiral`, `Pinwheel`) therefore retain tactile positions but appear numerically rather than by name on Roto-Control.
 
-### Trial deviations and omissions
+### Release Candidate deviations and omissions
 
 - The three exported identities named `Osc 1/2/3 Wave` are deliberately absent. The screenshots show continuous Wave/WT controls, not the previously inferred oscillator waveform dropdowns, and the owner has rejected those inferred mappings.
 - Filter Envelope Break and Sustain Level, VCA Alternate Control, the MOD 1/2/3 routing section, and arp Tempo are excluded as requested.
@@ -75,8 +78,8 @@ Every captured multi-state dropdown is a knob. Octave and Filter Type use six ta
 
 ### Import and test
 
-1. Back up the current Roto-Control setup; the trial shares Traveler's plugin hash and is intended to replace the active Traveler template temporarily.
-2. Import `Traveler-Roto-Control-Trial.json` as a **PLUGIN** template in Roto-Setup, then load Traveler in the same supported host used for the supplied exports.
+1. Back up the current Roto-Control setup; the release candidate shares Traveler's plugin hash and is intended to replace the active Traveler template during testing.
+2. Import `Traveler-Roto-Control-RC.json` as a **PLUGIN** template in Roto-Setup, then load Traveler in the same supported host used for the supplied exports.
 3. Confirm automatic Traveler recognition and motor recall before editing parameters.
 4. Verify page 1 contains the complete captured Performance group, then check each oscillator's Level/Pan pairing and related LFO controls on pages 2–4.
 5. On pages 2–6 and 8, verify every stepped position. The final five LFO states and final four Direction states should remain selectable even though Roto shows numbers instead of names. Confirm `Keyboard Amt` moves the filter's `KB TRK` control.
@@ -87,7 +90,7 @@ Every captured multi-state dropdown is a knob. Octave and Filter Type use six ta
 
 The expanded export resolves the mixer, drive/feedback, filter-link, bass-compensation, limiter, random-pan, oscillator-enable, and arpeggiator identities. It omits the previously captured Filter Cutoff identity, likely because the export reached its 64-encoder capacity; this essential control is retained from the prior export. LFO 3 Fade, Pitch, and Filter depth remain absent; they may not be host-exposed.
 
-The exports alone did not identify the normalized value ordering for Noise Type, so the primary mapping retains unnamed positions; the experimental trial uses the later screenshot-verified White/Pink order. PLUGIN mode can name only 16 of the documented 21 LFO waveforms and 20 arp modes; later positions remain numeric on hardware. A device test is still needed to confirm that Traveler's host-normalized selector order matches the displayed order.
+The exports alone did not identify the normalized value ordering for Noise Type, so the earlier native mapping retains unnamed positions; the release candidate uses the later screenshot-verified White/Pink order. PLUGIN mode can name only 16 of the documented 21 LFO waveforms and 20 arp modes; later positions remain numeric on hardware. A device test is still needed to confirm that Traveler's host-normalized selector order matches the displayed order.
 
 ## MIDI fallback
 
@@ -96,7 +99,7 @@ Import `Traveler-Roto-Control-MIDI.json` into a MIDI setup slot if the host cann
 ## Sources and assumptions
 
 - [Traveler User's Guide](https://www.keysolutionssounds.com/wp-content/uploads/Traveler_Users_Guide.pdf) — parameter names, ranges, enumerated states, MIDI Learn, Global MIDI CC, and MIDI-channel setup.
-- User-supplied `Traveler.json`, `Traveler-moreoptions.json`, `Traveler-moreoptions2.json`, and `Traveler-moreoptions3.json` exports — source of the exact plugin hash, host parameter indices, parameter hashes, ranges, and haptic settings; duplicate identities in the fourth export were deduplicated before controls were regrouped.
+- User-supplied `Traveler.json`, `Traveler-moreoptions.json`, `Traveler-moreoptions2.json`, `Traveler-moreoptions3.json`, and `Traveler-withfix.json` exports — source of the exact plugin hash, host parameter indices, parameter hashes, ranges, and haptic settings; duplicate identities were deduplicated before controls were regrouped.
 - [Melbourne Instruments MIDI helper](https://www.melbourneinstruments.com/s/MIDI-HELPER.json) and Roto-Control manual — MIDI JSON structure and control constraints.
 - [Community Roto templates](https://github.com/seee-m/Roto-Control-Templates), [rotocontrol-nickel](https://github.com/wyager/rotocontrol-nickel), and [TheGreatElemonade mappings](https://github.com/MrMatch246/RotoControlMappings/tree/main/TheGreatElemonade) — cross-checked haptic modes, step labels, ranges, and hardware label length.
 
@@ -105,6 +108,7 @@ The native mapping contains only identities captured in the supplied export; no 
 ## Validation
 
 ```sh
+jq empty Traveler-Roto-Control-RC.json
 jq empty Traveler-Roto-Control.json
 jq empty Traveler-Roto-Control-MIDI.json
 ```
